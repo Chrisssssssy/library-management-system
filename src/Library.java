@@ -67,7 +67,7 @@ public class Library {
 
     public boolean returnBook (int bookId) {
         for (Loan loan : loans) {
-            if (loan.getBook().getId() == bookId) {
+            if (loan.book().getId() == bookId) {
                 loans.remove(loan);
                 return true;
             }
@@ -77,7 +77,7 @@ public class Library {
 
     public ArrayList <Loan> findLoansByMemberId(int memberId ){
         for (Loan loan : loans) {
-            if (loan.getMember().memberNumber == memberId) {
+            if (loan.member().memberNumber == memberId) {
                 loans.add(loan);
             }
         }

@@ -1,5 +1,5 @@
 public class ConsoleUI {
-    Library library;
+   private final Library library;
 
 
     public ConsoleUI(Library library){
@@ -56,6 +56,16 @@ public class ConsoleUI {
             IO.println(library.findLoansByMemberId(memberNumber));
         } else {
             IO.println("Det indtastede medlemsnummer har ingen aktive lån.");
+        }
+    }
+
+    private int readInt(String prompt) {
+        while (true) {
+            try {
+                return Integer.parseInt(IO.readln(prompt));
+            } catch (NumberFormatException e) {
+                IO.println("Indtast venligst et gyldigt tal.");
+            }
         }
     }
 }
