@@ -90,8 +90,8 @@ void main() {
 
     ConsoleUI consoleUI = new ConsoleUI(library);
 
-//    library.addMember(member1);
-//    library.addMember(member2);
+    library.addMember(member1);
+    library.addMember(member2);
 //
 //    library.addBook(book1);
 //    library.addBook(book2);

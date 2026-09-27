@@ -75,13 +75,14 @@ public class Library {
         return false;
     }
 
-    public ArrayList <Loan> findLoansByMemberId(int memberId ){
+    public ArrayList<Loan> findLoansByMemberId(int memberId) {
+        ArrayList<Loan> result = new ArrayList<>();
         for (Loan loan : loans) {
             if (loan.member().memberNumber == memberId) {
-                loans.add(loan);
+                result.add(loan);
             }
         }
-        return loans;
+        return result;
     }
 }
 
